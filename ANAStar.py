@@ -1,7 +1,4 @@
 # Abedin Sherifi
-# Coding Assignment #2
-# RBE550
-# 03/14/2020
 
 import sys
 from PIL import Image
