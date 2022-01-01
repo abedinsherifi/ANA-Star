@@ -33,28 +33,42 @@ The epsilon parameter above gets set by the user and it usually increments in fi
 ## Results
 ### BFS
 
-Image below summarizes the cost function for each grid(maze) problem. The BFS algorithm per the data below indicates that the cost function decrease as maze size increases. It can be observed that the maze size of 500x500 has the lowest cost function from the rest of the maze sizes. <br>
-![](images/Data.png) <br>
+It can be noticed from the figures below that as the maze complexity increases, the cost increases drastically. The cost function for BFS is O(V + E) where V represents vertices and E represents edges. It took approximately 970 seconds or 16 mins / 64807 moves to find a solution to the Hard Maze. It was taking over 1 hr and still was not able to find a solution for the Very Hard Maze after which the run of the code was interrupted. <br>
+![](images/bfs1.png) <br>
 
-### Maze 10x10
-The solved path provided by the algorithm is provided in the image below as an array. The “S” start
-position is always (0,0). The path values are also plotted as shown below. <br>
-![](images/10_10.png) <br>
+#### Trivial Maze
+BFS Search Results for the Trivial Maze <br>
+![](images/BFS_Trivial.png) <br>
 
-### Maze 50x50
-The solved path provided by the algorithm is provided in the image below as an array. The “S” start
-position is always (0,0). The path values are also plotted as shown below. <br>
-![](images/50_50.png) <br>
+### Medium Maze
+BFS Search Results for the Medium Maze <br>
+![](images/BFS_Medium.png) <br>
 
-### Maze 100x100
-The solved path provided by the algorithm is provided in the image below as an array. The “S” start
-position is always (0,0). The path values are also plotted as shown below. <br>
-![](images/100_100.png) <br>
+### Hard Maze
+BFS Search Results for the Hard Maze <br>
+![](images/BFS_Hard.png) <br>
 
-### Maze 500x500
-The solved path provided by the algorithm is provided in the image below as an array. The “S” start
-position is always (0,0). The path values are also plotted as shown below. <br>
-![](images/500_500.png) <br>
+### ANA*
 
-https://prespafree1.github.io/BFS-Algorithm/
+It can be noticed from the figures below that as the maze complexity increases, the cost function increase as well. ANA* implements heuristics which over time improves the cost to the optimal solution. We have to point out here that for the Hard and Very Hard Maze, the ANA* algorithm used the Improve Solution function twice. Based on these results, it can be observed for example for the Very Hard Maze that the initial sub-optimal solution was captured in 0.319 seconds and time to the optimal solution in 6.274 seconds with 18063 moves. Comparing these statistics to the Hard Maze of BFS (970 seconds or 16 mins / 64807 moves), it can be concluded that the ANA* is truly superior to the BFS. ANA* solved the Very Hard Maze (optimal solution) in 6.274 seconds with 18063 moves compared to BFS which took over 16 mins and over 64807 moves! <br>
+![](images/ana1.png) <br>
+
+#### Trivial Maze
+ANA* Search Results for the Trivial Maze <br>
+![](images/ANAStar_trivial.png) <br>
+
+### Medium Maze
+ANA* Search Results for the Medium Maze <br>
+![](images/ANAStar_Medium.png) <br>
+
+### Hard Maze
+ANA* Search Results for the Hard Maze <br>
+![](images/ANAStar_Hard.png) <br>
+
+### Very Hard Maze
+ANA* Search Results for the Very Hard Maze <br>
+![](images/ANAStar_Very_Hard.png) <br>
+
+## Summary
+In summary, the ANA* is superior to the BFS algorithm. The ANA* algorithm finds an initial solution way faster, converges to the optimal solution very fast, and it finds the goal state from the start state in the fewest number of moves.
 
