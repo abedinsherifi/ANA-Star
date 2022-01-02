@@ -72,4 +72,4 @@ ANA* Search Results for the Very Hard Maze <br>
 ## Summary
 In summary, the ANA* is superior to the BFS algorithm. The ANA* algorithm finds an initial solution way faster, converges to the optimal solution very fast, and it finds the goal state from the start state in the fewest number of moves. <br>
 
-https://prespafree1.github.io/ANA-Star/
+https://abedinsherifi.github.io/ANA-Star/
